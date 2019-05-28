@@ -2,11 +2,30 @@
 <html>
 <head>
 	<title>Vue Basics</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
 	<h1>Vue Basics</h1>
 	<div id="main">
-		<h2>{{ title }}</h2>	
+		<h2>{{ title }}</h2>
+		<!-- Using a method -->
+		<p>{{ greet('morning') }}</p>
+		<!-- use v-bind to bind data to attr -->
+		<a v-bind:href="url">Youtube</a>
+		<div v-bind:class="classes">Classes from instance</div>
+		<input type="" v-bind:value="name">
+
+		<p>{{wage}} dollars per hour</p>
+		<!-- onclick events -->
+		<button v-on:click="changeWage(1)">Increase by 1</button>
+		<button v-on:click="changeWage(-1)">Decrease by 1</button>
+		<br>
+		<button v-on:dblclick="changeWage(5)">Increase by 5</button>
+		<button v-on:dblclick="changeWage(-5)">Decrease by 5</button>
+		<br>
+		<!-- Event objects -->
+		<button @click="logEvent">Log Event Info</button>
+		<div class="canvas" @mousemove="logCoords">{{ coords.x }} | {{ coords.y }}</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
