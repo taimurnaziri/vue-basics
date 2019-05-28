@@ -8,6 +8,7 @@ and is easy to pick up and integrate with other libraries or existing projects.<
 <p>It is very to get things up and ruuning, create a new project locally and include the script below in your index.html file.
 <br>
 
-	`<!-- development version, includes helpful console warnings -->
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>`
+	<!-- development version, includes helpful console warnings -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	
 </p>
