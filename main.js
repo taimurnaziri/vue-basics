@@ -1,38 +1,10 @@
-// initiate new vue instance
-// new keyword followed by 'Vue' obj
-new Vue({
-	// el stand for element property and the 
-	// value is the class or id of that element
-	el: '#main',
-	// data obj includes all 'data' inside the defined element
-	data: {
-		// inject dynamic title
-		title: 'Becoming a Vue Ninja',
-		name: 'Tai',
-		url: 'youtube.com',
-		classes: ['one', 'two'],
-		wage: 100,
-		coords: {
-			x: 0,
-			y: 0
-		}
-	},
-	// inject methods object
-	methods: {
-		// include argument parameter
-		greet(time){
-								   // use string interpolation to include time and name
-			return `Hello and good ${time}, ${this.name}`
-		},
-		changeWage(amount){
-			this.wage += amount
-		},
-		logEvent(e){
-			console.log(e);
-		},
-		logCoords(i){
-			this.coords.x = i.offsetX
-			this.coords.y = i.offsetY
-		}
-	}
-})
+// what is a potential pitfall with using 'typeof bar ===' "object" to determine if 'bar' is an object?
+// how can this pitfall be avoided?
+
+// what will the code below output to the console and why?
+(function (){
+	var a = b = 3;	
+})();
+
+console.log("a defined? " + (typeof a !== 'undefined'));
+console.log("b defined? " + (typeof b !== 'undefined'));
